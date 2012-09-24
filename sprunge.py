@@ -98,7 +98,7 @@ SEE ALSO
                                           HtmlFormatter(full=True,
                                           style='borland',
                                           lineanchors='n',
-                                          linenos='inline',
+                                          linenos='table',
                                           encoding='utf-8')))
 
     def post(self, got):
