@@ -31,7 +31,7 @@ class Index(webapp.RequestHandler):
 sprunge(1)                          SPRUNGE                          sprunge(1)
 
 NAME
-    sprunge: command line pastebin:
+    sprunge: command line pastebin.
 
 SYNOPSIS
     &lt;command&gt; | curl -F '%s=&lt;-' %s
