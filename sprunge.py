@@ -24,6 +24,7 @@ class Index(webapp.RequestHandler):
     r = 'sprunge'
 
     def help(self, u, r):
+        f = 'data:text/html,<form action="%s" method="POST"><textarea name="%s" cols="80" rows="24"></textarea><br><button type="submit">%s</button></form>' % (u, r, r)
         return """
 <style> a { text-decoration: none } </style>
 <pre>
@@ -37,6 +38,7 @@ SYNOPSIS
 
 DESCRIPTION
     add <a href='http://pygments.org/docs/lexers/'>?&lt;lang&gt;</a> to resulting url for line numbers and syntax highlighting
+    use <a href='%s'>this form</a> to paste from a browser
 
 EXAMPLES
     ~$ cat bin/ching | curl -F '%s=&lt;-' %s
@@ -46,7 +48,7 @@ EXAMPLES
 SEE ALSO
     http://github.com/rupa/sprunge
 
-</pre>""" % (r, u, r, u, u, u)
+</pre>""" % (r, u, f, r, u, u, u)
 
     def new_id(self):
         nid = ''
